@@ -1,0 +1,53 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  padding-top: 5rem;
+  text-align: center;
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+  url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: max(60%, 200px);
+}
+
+h1 {
+  font-size: var(--fs-900);
+  color: var(--very-dark-magenta);
+  line-height: 1;
+  max-width: 12ch;
+  margin-bottom: 1em;
+  font-weight: 800;
+
+  @media (max-width:50rem) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.lead {
+  font-size: var(--fs-500);
+}
+
+// Layout
+
+main {
+  display: grid;
+  gap: 3rem 1rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .intro {
+    grid-column: 1/2;
+  }
+  .ratings {
+    grid-column: 2/3;
+    align-self: center;
+  }
+  .quotes {
+    grid-column: 1/-1;
+  }
+}

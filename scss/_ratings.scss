@@ -1,0 +1,40 @@
+.ratings{
+    --flow-space: 3rem;
+    li{
+        background: var(--light-grayish-magenta);
+        color: var(--very-dark-magenta);
+        font-weight: 800;
+        padding: 0.8rem 2rem;
+        border-radius: var(--br);
+        max-width: 25rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::before{
+            content: "";
+            width: 100px;
+            // background-color: violet;
+            background-image: url(../images/icon-star.svg);
+            display: block;
+            margin: 0 auto;
+            height: 1rem;
+            margin-bottom: 0.5rem;
+            background-repeat: space;
+        }
+
+        @media (min-with: 50em) {
+            display: flex;   
+        }
+    }
+
+    &::before{
+        margin: 0 1.5rem 0 0;
+    }
+
+    &:first-of-type{
+        transform: translateX(-2rem);
+    }
+    &:last-of-type{
+        transform: translateX(2rem);
+    }
+}

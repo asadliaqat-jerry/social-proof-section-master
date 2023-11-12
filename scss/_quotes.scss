@@ -1,0 +1,43 @@
+.quotes{
+    --spacer: 2rem;
+    blockquote{
+        background: var(--very-dark-magenta);
+        color: var(--light-grayish-magenta);
+        text-align: left;
+        border-radius: var(--br);
+        padding: var(--spacer);
+        margin: 0 auto;
+        max-width: 25rem; 
+        height: 100%;
+    }
+
+    img{
+        border-radius: 50%;
+        margin-right: var(--spacer);
+        width: 3rem;
+    }
+
+    .status{
+        color: var(--soft-pink);
+    }
+
+    .quote{
+        margin-top: var(--spacer);
+    }
+
+    .name{
+        font-weight: 800;
+    }
+
+    li{
+        &:nth-child(2){
+            transform:translateY(3rem);
+        }
+
+        &:nth-child(3){
+            transform:translateY(6rem);
+        }
+    }
+}
+
+
